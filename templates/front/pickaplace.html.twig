@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        #map {
+            width: 100%;
+            height: 300px;
+            background-color: grey;
+
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="nav-scroller bg-white box-shadow">
+        {#<nav class="nav nav-underline fixed-top bg-white box-shadow collapse navbar-collapse justify-content-center justify-content-sm-start    " style="margin-top: 56px; padding-bottom: 0">
+            <a class="nav-link" href="#">
+                <span class="badge badge-pill bg-light align-text-bottom ">27</span>
+                Friends
+            </a>
+
+            <a class="nav-link" href="#">
+                <span class="badge badge-pill bg-light align-text-bottom">27</span>
+                Friends
+            </a>
+
+            <a class="nav-link" href="#">
+                <span class="badge badge-pill bg-light align-text-bottom">27</span>
+                Friends
+            </a>
+        </nav>#}
+
+        <div style="width:100%;height: 300px;{#margin-top: 45px;#}position: fixed;">
+            <div id="map" ></div>
+        </div>
+
+    </div>
+
+
+
+<main role="main" style="margin-top: {#200#}255px">
+    <div class="px-0 bg-white rounded box-shadow">
+        <!--<h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>-->
+
+        {% set i = 10 %}
+        <div class="media text-muted pt-2 px-3 border-bottom border-gray place"  data-lat="-12.2037349" data-lng="-75.8016728">
+            <img data-src="{{ asset('images/full.png') }}" src="{{ asset('images/full.png') }}" alt=""  style="width: 32px; height: 32px;" class="mr-2 rounded">
+            <p class="media-body pt-2 mb-0 small lh-125 ">
+                <strong class="d-block text-gray-dark">Huancaya</strong>
+            </p>
+            <p>Desde: S./{{ random(15,20)*i }}</p>
+        </div>
+            <div class="media text-muted pt-2 px-3 border-bottom border-gray place"  data-lat="-12.079673" data-lng="-76.512512">
+            <img data-src="{{ asset('images/full.png') }}" src="{{ asset('images/full.png') }}" alt=""  style="width: 32px; height: 32px;" class="mr-2 rounded">
+            <p class="media-body pt-2 mb-0 small lh-125 ">
+                <strong class="d-block text-gray-dark">Antioquia</strong>
+            </p>
+            <p>Desde: S./{{ random(15,20)*i }}</p>
+        </div>
+            <div class="media text-muted pt-2 px-3 border-bottom border-gray place"  data-lat="-11.468606" data-lng="-76.6235661">
+            <img data-src="{{ asset('images/full.png') }}" src="{{ asset('images/full.png') }}" alt=""  style="width: 32px; height: 32px;" class="mr-2 rounded">
+            <p class="media-body pt-2 mb-0 small lh-125 ">
+                <strong class="d-block text-gray-dark">Canta</strong>
+            </p>
+            <p>Desde: S./{{ random(15,20)*i }}</p>
+        </div>
+            <div class="media text-muted pt-2 px-3 border-bottom border-gray place"  data-lat="-10.8925649" data-lng="-77.5291841">
+            <img data-src="{{ asset('images/full.png') }}" src="{{ asset('images/full.png') }}" alt=""  style="width: 32px; height: 32px;" class="mr-2 rounded">
+            <p class="media-body pt-2 mb-0 small lh-125 ">
+                <strong class="d-block text-gray-dark">Caral</strong>
+            </p>
+            <p>Desde: S./{{ random(15,20)*i }}</p>
+        </div>
+            <div class="media text-muted pt-2 px-3 border-bottom border-gray place"  data-lat="-13.0230668" data-lng="-76.2425545">
+            <img data-src="{{ asset('images/full.png') }}" src="{{ asset('images/full.png') }}" alt=""  style="width: 32px; height: 32px;" class="mr-2 rounded">
+            <p class="media-body pt-2 mb-0 small lh-125 ">
+                <strong class="d-block text-gray-dark">Lunahuaná</strong>
+            </p>
+            <p>Desde: S./{{ random(15,20)*i }}</p>
+        </div>
+
+
+        <small class="d-block text-right mt-3">
+            <a href="#">All updates</a>
+        </small>
+    </div>
+</main>
+{#
+<main role="main" class="container">
+    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-purple rounded box-shadow">
+        <img class="mr-3" src="" alt="" width="48" height="48">
+        <div class="lh-100">
+            <h6 class="mb-0 text-white lh-100">Bootstrap</h6>
+            <small>Since 2011</small>
+        </div>
+    </div>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Recent updates</h6>
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">@username</strong>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">@username</strong>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=6f42c1&fg=6f42c1&size=1" alt="" class="mr-2 rounded">
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <strong class="d-block text-gray-dark">@username</strong>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            </p>
+        </div>
+        <small class="d-block text-right mt-3">
+            <a href="#">All updates</a>
+        </small>
+    </div>
+
+    <div class="my-3 p-3 bg-white rounded box-shadow">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Suggestions</h6>
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Full Name</strong>
+                    <a href="#">Follow</a>
+                </div>
+                <span class="d-block">@username</span>
+            </div>
+        </div>
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Full Name</strong>
+                    <a href="#">Follow</a>
+                </div>
+                <span class="d-block">@username</span>
+            </div>
+        </div>
+        <div class="media text-muted pt-3">
+            <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+            <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+                <div class="d-flex justify-content-between align-items-center w-100">
+                    <strong class="text-gray-dark">Full Name</strong>
+                    <a href="#">Follow</a>
+                </div>
+                <span class="d-block">@username</span>
+            </div>
+        </div>
+        <small class="d-block text-right mt-3">
+            <a href="#">All suggestions</a>
+        </small>
+    </div>
+</main>
+
+#}
+{% endblock %}
