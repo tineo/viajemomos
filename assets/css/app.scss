@@ -50,7 +50,7 @@ body {
   //position: relative;
   //z-index: 2;
   height: 2.75rem;
-  overflow-y: hidden;
+  //overflow-y: hidden;
 }
 
 .nav-scroller .nav {
@@ -110,19 +110,24 @@ padding-right:0px;
 .cont-map{
   width:100%;
   height: 300px;
-  margin-top: 47px;
+  margin-top: 0px;
   //position: relative;
 }
 
 #map {
   width: 100%;
   height: 300px;
-  background-color: #ff9bbe;
+  background-color: #9ba7ff;
 
   position: absolute !important;
   overflow: hidden !important;
 
 
+}
+
+.main-opciones{
+  overflow: scroll !important;
+  height: 200px !important;
 }
 
 
