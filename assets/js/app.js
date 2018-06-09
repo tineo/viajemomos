@@ -41,6 +41,7 @@ $(function () {
 
     if($("#map").length > 0){
     $(".place").click(function (evt) {
+        console.log($(this).find(".media-body").eq(0).text())
         console.log($(this).data("lat"))
         console.log($(this).data("lng"))
 
@@ -54,7 +55,16 @@ $(function () {
         }
 
         map.fitBounds(bounds);
+        var lugar = $(this).find(".media-body").eq(0).text()
+        $("#goto").fadeIn(750, function () {
+            $("#lugar").text(lugar);
+        });
 
+    });
+
+
+    $("#gotoplace").click(function (evt) {
+        window.location.href = "/place";
     });
 
     initMap();

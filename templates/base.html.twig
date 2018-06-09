@@ -16,7 +16,7 @@
 
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120581737-1"></script>
+        {#<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120581737-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -24,7 +24,7 @@
 
             gtag('config', 'UA-120581737-1');
         </script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->#}
         {% block stylesheets %}{% endblock %}
     </head>
     <body class="bg-light">
@@ -39,10 +39,12 @@
 
             <div class="navbar-collapse offcanvas-collapse " id="navbarsExampleDefault">
                 <ul class="navbar-nav">
-                    <!--<li class="nav-item active">
-                        <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-search"></i> Busqueda <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#"><i class="far fa-user"></i> Cesar <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#"><i class="fas fa-cogs"></i> Configuracion <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="#">Notifications</a>
                     </li>
                     <li class="nav-item">
